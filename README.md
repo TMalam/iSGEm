@@ -24,20 +24,21 @@ CONTRIBUTIONS:
 * Non-eBPF and eBPF function chaining
 
 
-//configuration: Modbus TCP server on raspberry_pi1(enp2s0),  Modbus TCP client on raspberry_pi2(enp3s0), CPN node (controller, scripts, uNFs installed on switch, non-ebpf function on dataplane processing pipeline)
+Configuration: Modbus TCP server on raspberry_pi1(enp2s0),  Modbus TCP client on raspberry_pi2(enp3s0), CPN node (controller, scripts, uNFs installed on switch, non-ebpf function on dataplane processing pipeline)
 
-//Requirements:
+Requirements:
 *Linux lite 7.4 24.04 codename noble x86_64 GNU/Linux on CPN nodekernel 6.8.0-60-generic
 *clang ver 18.1.3 thread posix
 *python 3.12.3
 *use sudo for wireshark and commands, su not supported
 
+'''zsh
 *pip install vmdpy or GitHub lone https://github.com/vrcarv/vmdpy.git
 % may need to run in virtual environment and file vmdp.py file in project folder where sniffer/modbusparser/fdi detection scripts are placed
 
 *pip install tensorflow
 *pip install scikit-learn
-
+'''
 1. Run the simulation to generate system state [V_b, I_b]
 
 2. Execute the Modbus TCP server script at raspberry pi1
